@@ -83,20 +83,6 @@ To run this project locally, follow these steps:
 - **Save Password**: Users can save generated passwords.
 - **Manage Passwords**: Users can view, copy, and delete saved passwords.
 
-## Screenshots
-
-- **Login Page**:
-  ![Login Page](path_to_screenshot)
-
-- **Dashboard**:
-  ![Dashboard](path_to_screenshot)
-
-- **Password Generator**:
-  ![Password Generator](path_to_screenshot)
-
-- **Saved Passwords**:
-  ![Saved Passwords](path_to_screenshot)
-
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
