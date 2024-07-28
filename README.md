@@ -87,3 +87,47 @@ ciphersafe/
 ├── next.config.js
 ├── package.json
 └── README.md
+
+## Components
+
+- **PasswordGenerator.js**: Component for generating strong passwords.
+- **SavedPasswords.js**: Component for displaying saved passwords.
+
+## Usage
+
+- **Login**: Users can log in using their credentials.
+- **Generate Password**: Users can generate strong passwords.
+- **Save Password**: Users can save generated passwords.
+- **Manage Passwords**: Users can view, copy, and delete saved passwords.
+
+## Screenshots
+
+- **Login Page**:
+  ![Login Page](path_to_screenshot)
+
+- **Dashboard**:
+  ![Dashboard](path_to_screenshot)
+
+- **Password Generator**:
+  ![Password Generator](path_to_screenshot)
+
+- **Saved Passwords**:
+  ![Saved Passwords](path_to_screenshot)
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature-branch`.
+5. Open a pull request.
+
+## Contributors
+
+- **Yuvraj Bhardwaj**
+
+## License
+
+This project is licensed under the MIT License.
