@@ -5,12 +5,12 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
 - [Setup Instructions](#setup-instructions)
 - [Components](#components)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
-- [Contributors](#contributors)
 - [License](#license)
 - [Project Structure](#project-structure)
 
@@ -30,6 +30,11 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Headless UI**: Unstyled, fully accessible UI components.
 - **React Icons**: Popular icons as React components.
+
+## Contributors
+
+- **Yuvraj Bhardwaj**
+
 
 ## Setup Instructions
 To run this project locally, follow these steps:
@@ -101,10 +106,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes: `git commit -m 'Add some feature'`.
 4. Push to the branch: `git push origin feature-branch`.
 5. Open a pull request.
-
-## Contributors
-
-- **Yuvraj Bhardwaj**
 
 ## License
 
