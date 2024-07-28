@@ -6,12 +6,13 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
-- [Project Structure](#project-structure)
 - [Components](#components)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
+- [Contributors](#contributors)
 - [License](#license)
+- [Project Structure](#project-structure)
 
 ## Features
 - **User Authentication**: Secure login and sign out using NextAuth.js.
@@ -65,29 +66,6 @@ To run this project locally, follow these steps:
 6. **Open the application**:
     - Visit `http://localhost:3000` in your browser.
 
-## Project Structure
-```plaintext
-ciphersafe/
-├── components/
-│   ├── PasswordGenerator.js
-│   ├── SavedPasswords.js
-├── pages/
-│   ├── _app.js
-│   ├── api/
-│   ├── index.js
-│   ├── dashboard.js
-├── public/
-│   ├── images/
-├── styles/
-│   ├── globals.css
-├── utils/
-│   ├── firebase.js
-├── .env.local
-├── .gitignore
-├── next.config.js
-├── package.json
-└── README.md
-
 ## Components
 
 - **PasswordGenerator.js**: Component for generating strong passwords.
@@ -131,3 +109,26 @@ Contributions are welcome! Please follow these steps:
 ## License
 
 This project is licensed under the MIT License.
+
+## Project Structure
+```plaintext
+ciphersafe/
+├── components/
+│   ├── PasswordGenerator.js
+│   ├── SavedPasswords.js
+├── pages/
+│   ├── _app.js
+│   ├── api/
+│   ├── index.js
+│   ├── dashboard.js
+├── public/
+│   ├── images/
+├── styles/
+│   ├── globals.css
+├── utils/
+│   ├── firebase.js
+├── .env.local
+├── .gitignore
+├── next.config.js
+├── package.json
+└── README.md
