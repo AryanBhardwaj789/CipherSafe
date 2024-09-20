@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-username/ciphersafe.git
+    git clone https://github.com/AryanBhardwaj789/CipherSafe.git
     cd ciphersafe
     ```
 
