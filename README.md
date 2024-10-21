@@ -5,13 +5,14 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Contributors](#contributors)
 - [Setup Instructions](#setup-instructions)
-- [Project Structure](#project-structure)
 - [Components](#components)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
+- [Project Structure](#project-structure)
 
 ## Features
 - **User Authentication**: Secure login and sign out using Clerk.
@@ -31,12 +32,17 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 - **Headless UI**: Unstyled, fully accessible UI components.
 - **React Icons**: Popular icons as React components.
 
+## Contributors
+
+- **Yuvraj Bhardwaj**
+
+
 ## Setup Instructions
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-username/ciphersafe.git
+    git clone https://github.com/AryanBhardwaj789/CipherSafe.git
     cd ciphersafe
     ```
 
@@ -67,6 +73,32 @@ To run this project locally, follow these steps:
 
 6. **Open the application**:
     - Visit `http://localhost:3000` in your browser.
+
+## Components
+
+- **PasswordGenerator.js**: Component for generating strong passwords.
+- **SavedPasswords.js**: Component for displaying saved passwords.
+
+## Usage
+
+- **Login**: Users can log in using their credentials.
+- **Generate Password**: Users can generate strong passwords.
+- **Save Password**: Users can save generated passwords.
+- **Manage Passwords**: Users can view, copy, and delete saved passwords.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature-branch`.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Project Structure
 ```plaintext
