@@ -33,17 +33,17 @@ const Homepage = () => {
                 <article className="bg-violet-200 border-2 border-gray-600 rounded-xl w-full md:w-2/5 m-4 p-8 flex flex-col text-center items-center">
                     <Image className="mb-2" src={user1} alt="Jane Doe" width={300} priority />
                     <p className="mb-2"><span className="font-rubik font-semibold text-xl">Jane Doe</span></p>
-                    <p><span className="font-rubik font-semibold text-md tracking-tight">"Password-Manager has revolutionized how I manage my passwords. It's secure and so easy to use!"</span></p>
+                    <p><span className="font-rubik font-semibold text-md tracking-tight">&quot;Password-Manager has revolutionized how I manage my passwords. It&apos;s secure and so easy to use!&quot;</span></p>
                 </article>
                 <article className="bg-emerald-200 border-2 border-gray-600 rounded-xl w-full md:w-2/5 m-4 p-8 flex flex-col text-center items-center">
                     <Image className="mb-2" src={user2} alt="Emma Johnson" width={300} priority />
                     <p className="mb-2"><span className="font-rubik font-semibold text-xl">Emma Johnson</span></p>
-                    <p><span className="font-rubik font-semibold text-md tracking-tight">"Being able to access my passwords from any device is a game-changer. Highly recommend!"</span></p>
+                    <p><span className="font-rubik font-semibold text-md tracking-tight">&quot;Being able to access my passwords from any device is a game-changer. Highly recommend!&quot;</span></p>
                 </article>
                 <article className="bg-rose-200 border-2 border-gray-600 rounded-xl w-full md:w-2/5 m-4 p-8 flex flex-col text-center items-center">
                     <Image className="mb-2" src={user3} alt="John Smith" width={300} priority />
                     <p className="mb-2"><span className="font-rubik font-semibold text-xl">John Smith</span></p>
-                    <p><span className="font-rubik font-semibold text-md tracking-tight">"I love the password generation feature. It gives me peace of mind knowing my accounts are secure."</span></p>
+                    <p><span className="font-rubik font-semibold text-md tracking-tight">&quot;I love the password generation feature. It gives me peace of mind knowing my accounts are secure.&quot;</span></p>
                 </article>
             </div>
         </>
