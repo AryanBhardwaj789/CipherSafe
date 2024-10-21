@@ -123,7 +123,7 @@ const Dashboard = () => {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        Your password was created with Security and it's encrypted from side to side.
+                        Your password was created with Security and it&apos;s encrypted from side to side.
                       </p>
                       <PasswordGenerator password={password} nickname={nickname} setNickname={setNickname} generatePassword={generatePassword} handleSavePassword={handleSavePassword} />
                     </div>
