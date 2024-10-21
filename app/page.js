@@ -3,8 +3,6 @@ import Navbar from './component/Navbar'
 import Footer from './component/Footer'
 import Homepage from './component/Homepage'
 
-
-
 const page = () => {
   return (
     <>

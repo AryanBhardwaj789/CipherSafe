@@ -1,7 +1,7 @@
-"use client";
+"use client"; 
 import React, { useEffect, useState, Fragment } from 'react';
-import { useSession, signOut } from 'next-auth/react';
-import { FaSignOutAlt, FaPlus } from 'react-icons/fa';
+import { useUser, UserButton} from "@clerk/nextjs";
+import { FaPlus } from 'react-icons/fa';
 import { Dialog, Transition } from '@headlessui/react';
 import PasswordGenerator from '../component/PasswordGenerator';
 import SavedPasswords from '../component/SavedPasswords';
@@ -9,7 +9,7 @@ import { collection, addDoc, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 
 const Dashboard = () => {
-  const { data: session, status } = useSession();
+  const { user, isLoaded, isSignedIn} = useUser();
   const [isClient, setIsClient] = useState(false);
   const [savedPasswords, setSavedPasswords] = useState([]);
   const [isGeneratorOpen, setIsGeneratorOpen] = useState(false);
@@ -19,7 +19,6 @@ const Dashboard = () => {
   useEffect(() => {
     setIsClient(true);
 
-    // Load saved passwords from Firestore
     const fetchPasswords = async () => {
       const querySnapshot = await getDocs(collection(db, 'passwords'));
       const passwords = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
@@ -61,19 +60,14 @@ const Dashboard = () => {
     return null;
   }
 
-  if (status === 'loading') {
+  if (!isLoaded) {
     return <div>Loading...</div>;
   }
 
-  if (!session) {
-    window.location.href = '/'; // Redirect to the home page if not signed in
-    return null; // Prevent rendering "Not signed in"
+  if (!isSignedIn) {
+    window.location.href = '/'; 
+    return null; 
   }
-
-  const handleSignOut = async () => {
-    await signOut();
-    window.location.href = '/'; // Redirect to the home page after sign out
-  };
 
   return (
     <div className="min-h-screen flex flex-col bg-cover bg-center" style={{ backgroundImage: "url('/images/mesh-gradient.png')" }}>
@@ -83,12 +77,12 @@ const Dashboard = () => {
         </div>
         <ul className='flex items-center'>
           <li>
-            <button className="transition-all px-8 text-base text-black max-[600px]:text-sm max-[600px]:h-13 rounded-xl bg-white h-[44px] border-gray-200 border-[1px] cursor-default">
-              <span>Welcome, <b>{session.user.name}</b></span>
+            <button className="transition-all px-8 text-base text-black max-[600px]:text-sm max-[600px]:h-13 rounded-xl bg-white h-[44px] border-gray-200 cursor-default">
+              <span>Welcome, <b>{user.fullName}</b></span>
             </button>
           </li>
-          <button className='ml-10 text-2xl' onClick={handleSignOut}>
-            <FaSignOutAlt />
+          <button className='ml-10 text-2xl'>
+          <UserButton />
           </button>
         </ul>
       </nav>

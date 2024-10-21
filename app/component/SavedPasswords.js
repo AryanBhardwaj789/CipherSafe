@@ -20,12 +20,17 @@ const SavedPasswords = ({ savedPasswords, setSavedPasswords }) => {
     alert("Password copied to clipboard!");
   };
 
-  const deletePassword = async (id) => {
-    await deleteDoc(doc(db, "passwords", id));
-    setSavedPasswords((prevPasswords) =>
-      prevPasswords.filter((password) => password.id !== id)
-    );
+    const deletePassword = async (id) => {
+      if (!id) {
+          console.error("ID is undefined or invalid:", id);
+          return; // Exit if id is not valid
+      }
+      await deleteDoc(doc(db, "passwords", id));
+      setSavedPasswords((prevPasswords) =>
+          prevPasswords.filter((password) => password.id !== id)
+      );
   };
+
 
   return (
     <div className="saved-passwords">

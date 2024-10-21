@@ -14,7 +14,7 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 - [License](#license)
 
 ## Features
-- **User Authentication**: Secure login and sign out using NextAuth.js.
+- **User Authentication**: Secure login and sign out using Clerk.
 - **Password Generation**: Generate strong and secure passwords.
 - **Password Storage**: Store and manage passwords securely using Firebase Firestore.
 - **Password Visibility Toggle**: View or hide passwords.
@@ -26,6 +26,7 @@ CipherSafe is a secure and user-friendly password manager built using React, Nex
 - **React**: JavaScript library for building user interfaces.
 - **Next.js**: React framework with server-side rendering and static site generation.
 - **Firebase**: Backend-as-a-Service (BaaS) for authentication and Firestore database.
+- **Clerk**: Secure login and sign out using Clerk
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Headless UI**: Unstyled, fully accessible UI components.
 - **React Icons**: Popular icons as React components.
@@ -49,13 +50,15 @@ To run this project locally, follow these steps:
     - Enable Firestore and authentication in the Firebase project.
     - Copy your Firebase configuration and replace the placeholder in the `firebaseConfig` object in `utils/firebase.js`.
 
-4. **Setup NextAuth**:
+4. **Setup Clerk**:
     - Create a `.env.local` file in the root of the project.
-    - Add your NextAuth secret and provider configurations to the `.env.local` file:
+    - Add your Clerk API key and frontend API to the `.env.local` file:
+
     ```env
-    NEXTAUTH_SECRET=your_nextauth_secret
-    NEXTAUTH_URL=http://localhost:3000
+    NEXT_PUBLIC_CLERK_FRONTEND_API=https://your-clerk-subdomain.clerk.dev
+    CLERK_API_KEY=your_clerk_api_key
     ```
+    Replace `your-clerk-subdomain` and `your_clerk_api_key` with your actual Clerk subdomain and API key.
 
 5. **Run the development server**:
     ```sh
@@ -71,19 +74,29 @@ ciphersafe/
 ├── components/
 │   ├── PasswordGenerator.js
 │   ├── SavedPasswords.js
-├── pages/
-│   ├── _app.js
-│   ├── api/
-│   ├── index.js
-│   ├── dashboard.js
+│   ├── Navbar.js
+│   ├── Homepage.js
+│   ├── Footer.js
+├── auth/
+│   ├── sign-in
+│   │   ├── [[...sign-in]]
+│   │   │   ├── page.js
+│   ├── sign-up
+│   │   ├── [[...sign-up]]
+│   │   │   ├── page.js
+├── login/
+│   ├── page.js
+├── main/
+│   ├── layout.js
+│   ├── page.js
 ├── public/
 │   ├── images/
-├── styles/
-│   ├── globals.css
+│   ├── fonts/
 ├── utils/
 │   ├── firebase.js
 ├── .env.local
 ├── .gitignore
 ├── next.config.js
+├── middleware.ts
 ├── package.json
 └── README.md
